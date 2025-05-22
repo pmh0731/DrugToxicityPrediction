@@ -7,6 +7,8 @@
 Before running the code, create a Conda virtual environment using the provided `DrugToxicityPrediction.yaml` file. This ensures that all required dependencies (including R integration and machine learning libraries) are properly configured.
 
 ```bash
+git clone https://github.com/pmh0731/DrugToxicityPrediction.git
+
 conda env create -f DrugToxicityPrediction.yaml
 conda activate DrugToxicityPrediction
 ```
@@ -29,7 +31,7 @@ conda activate DrugToxicityPrediction
 This mode evaluates model performance using the dataset provided in `Supplementary_Table_3.xlsx` (from the original publication).
 
 ```bash
-python drug_toxicity_predictor.py --mode e --output ./results_evaluation
+python ./code/drug_toxicity_predictor.py --mode e --output ./results_evaluation
 ```
 
 This will generate a performance metrics file (`evaluation_performance.xlsx`) in the specified output directory.
@@ -39,13 +41,13 @@ This will generate a performance metrics file (`evaluation_performance.xlsx`) in
 To predict the toxicity status of new compounds, prepare an input file containing target gene information and chemical structures. Use the format provided in `test_data.tsv` as a reference.
 
 ```bash
-python drug_toxicity_predictor.py --mode p --input ./test_data.tsv --output ./results_prediction
+python ./code/drug_toxicity_predictor.py --mode p --input ./test_data.tsv --output ./results_prediction
 ```
 
 Optional: specify a different Ensembl human genome version (default is `hg38`):
 
 ```bash
-python drug_toxicity_predictor.py --mode p --input ./test_data.tsv --hg hg19 --output ./results_prediction
+python ./code/drug_toxicity_predictor.py --mode p --input ./test_data.tsv --hg hg19 --output ./results_prediction
 ```
 
 The prediction results, including toxicity probabilities and status (`Approved drug` or `Risky drug`), will be saved to the output directory.
