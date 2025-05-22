@@ -8,6 +8,7 @@ Before running the code, create a Conda virtual environment using the provided `
 
 ```bash
 git clone https://github.com/pmh0731/DrugToxicityPrediction.git
+cd ./DrugToxicityPrediction
 
 conda env create -f DrugToxicityPrediction.yaml
 conda activate DrugToxicityPrediction
