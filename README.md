@@ -39,13 +39,13 @@ This will generate a performance metrics file (`evaluation_performance.xlsx`) in
 To predict the toxicity status of new compounds, prepare an input file containing target gene information and chemical structures. Use the format provided in `test_data.tsv` as a reference.
 
 ```bash
-python drug_toxicity_predictor.py --mode p --input ./test_data.xlsx --output ./results_prediction
+python drug_toxicity_predictor.py --mode p --input ./test_data.tsv --output ./results_prediction
 ```
 
 Optional: specify a different Ensembl human genome version (default is `hg38`):
 
 ```bash
-python drug_toxicity_predictor.py --mode p --input ./test_data.xlsx --hg hg19 --output ./results_prediction
+python drug_toxicity_predictor.py --mode p --input ./test_data.tsv --hg hg19 --output ./results_prediction
 ```
 
 The prediction results, including toxicity probabilities and status (`Approved drug` or `Risky drug`), will be saved to the output directory.
