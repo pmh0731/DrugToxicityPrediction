@@ -1,6 +1,6 @@
 # DrugToxicityPrediction
 
-`drug_toxicity_predictor.py` is a Python script designed for evaluating drug toxicity based on chemical structure and biological target features. It supports both performance evaluation on a predefined dataset and prediction for new drug candidates.
+`drug_toxicity_predictor.py` is a Python script designed for evaluating drug toxicity based on biological target features (GPD) and chemical structure. It supports both performance evaluation on a dataset used in the paper (Park et al., 2025) and prediction for new drug candidates.
 
 ## Setup Instructions
 
@@ -36,7 +36,7 @@ This will generate a performance metrics file (`evaluation_performance.xlsx`) in
 
 #### 2. Predict Toxicity for New Drug Candidates
 
-To predict the toxicity status of new compounds, prepare an input file containing chemical structures and target gene information. Use the format provided in `test_data.xlsx` as a reference.
+To predict the toxicity status of new compounds, prepare an input file containing target gene information and chemical structures. Use the format provided in `test_data.xlsx` as a reference.
 
 ```bash
 python drug_toxicity_predictor.py --mode p --input ./test_data.xlsx --output ./results_prediction
@@ -49,6 +49,8 @@ python drug_toxicity_predictor.py --mode p --input ./test_data.xlsx --hg hg19 --
 ```
 
 The prediction results, including toxicity probabilities and status (`Approved drug` or `Risky drug`), will be saved to the output directory.
+
+##### Note: Predictions are not generated for compounds if their human or mouse target gene features have less than 50% coverage, or if SMILES featurization cannot be performed. For any drug that is excluded from prediction, the output file will indicate the specific reason.
 
 ### Notes
 
