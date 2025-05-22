@@ -36,7 +36,7 @@ This will generate a performance metrics file (`evaluation_performance.xlsx`) in
 
 #### 2. Predict Toxicity for New Drug Candidates
 
-To predict the toxicity status of new compounds, prepare an input file containing target gene information and chemical structures. Use the format provided in `test_data.xlsx` as a reference.
+To predict the toxicity status of new compounds, prepare an input file containing target gene information and chemical structures. Use the format provided in `test_data.tsv` as a reference.
 
 ```bash
 python drug_toxicity_predictor.py --mode p --input ./test_data.xlsx --output ./results_prediction
