@@ -67,3 +67,7 @@ Depending on the mode, the following output files will be generated:
 
 - **Evaluation mode (`e`)**: `evaluation_performance.xlsx`
 - **Prediction mode (`p`)**: `[input_filename].xlsx` containing predicted toxicity outcomes
+
+## Platform Compatibility
+
+This script is designed to run on **Linux** environments. While it may work on other operating systems, Linux is recommended and officially supported for full compatibility, especially with R integration and multiprocessing behavior.
