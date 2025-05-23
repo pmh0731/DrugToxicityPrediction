@@ -2,6 +2,10 @@
 
 `drug_toxicity_predictor.py` is a Python script designed for evaluating drug toxicity based on biological target features (GPD) and chemical structure. It supports both performance evaluation on a dataset used in the paper (Park et al., 2025) and prediction for new drug candidates.
 
+## Platform Compatibility
+
+This script is designed to run on **Linux** environments. While it may work on other operating systems, Linux is recommended and officially supported for full compatibility, especially with R integration and multiprocessing behavior.
+
 ## Setup Instructions
 
 Before running the code, create a Conda virtual environment using the provided `DrugToxicityPrediction.yaml` file. This ensures that all required dependencies (including R integration and machine learning libraries) are properly configured.
@@ -67,7 +71,3 @@ Depending on the mode, the following output files will be generated:
 
 - **Evaluation mode (`e`)**: `evaluation_performance.xlsx`
 - **Prediction mode (`p`)**: `[input_filename].xlsx` containing predicted toxicity outcomes
-
-## Platform Compatibility
-
-This script is designed to run on **Linux** environments. While it may work on other operating systems, Linux is recommended and officially supported for full compatibility, especially with R integration and multiprocessing behavior.
