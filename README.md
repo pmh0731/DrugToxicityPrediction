@@ -4,7 +4,7 @@
 
 ## Platform Compatibility
 
-This script is designed to run on **Linux** environments. While it may work on other operating systems, Linux is recommended and officially supported for full compatibility, especially with R integration and multiprocessing behavior.
+This script is designed to run on **Linux** environments. It may not work on other operating systems, Linux is recommended and officially supported for full compatibility.
 
 ## Setup Instructions
 
