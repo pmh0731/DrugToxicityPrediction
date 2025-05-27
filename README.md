@@ -1,6 +1,6 @@
 # DrugToxicityPrediction
 
-`drug_toxicity_predictor.py` is a Python script designed for evaluating drug toxicity based on biological target features (GPD) and chemical structure. It supports both performance evaluation on a dataset used in the paper (Park et al., 2025) and prediction for new drug candidates.
+`drug_toxicity_predictor.py` is a Python script designed for evaluating drug toxicity based on biological target features (GPD) and chemical structure. It supports both performance evaluation on a dataset used in the paper *(Park et al., 2025)* and prediction for new drug candidates.
 
 ## Platform Compatibility
 
